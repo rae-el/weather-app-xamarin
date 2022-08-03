@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Themes.DarkTheme">
+    <!--dark grey blue-->
+    <Color x:Key="PageBackgroundColor">#082032</Color>
+    <!--medium grey blue-->
+    <Color x:Key="ButtonBackgroundColor">#334756</Color>
+    <!--light orange-->
+    <Color x:Key="ButtonBorderColor">#e6bbad</Color>
+    <!--white-->
+    <Color x:Key="TextColor">#fff</Color>
+</ResourceDictionary>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Profile">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource PageBackground}">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BackButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="←"
+                        FontSize="Large"
+                        Style="{StaticResource SecondaryButtonStyle}"
+                        Clicked="BackButton_Clicked"
+                        Padding="2"
+                        Margin="2"
+                    >
+                </Button>
+                <Label x:Name="ProfileLabel"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text="Hi Cutie!"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                       Padding="2"
+                       Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <Label x:Name="NameLabel"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Name: "
+                   FontSize="Body"
+                       Padding="2"
+                        Margin="2"
+                      Style="{StaticResource LabelText}"
+                ></Label>
+                <Label x:Name="CityLabel"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Home City: "
+                   FontSize="Body"
+                       Padding="2"
+                        Margin="2"
+                      Style="{StaticResource LabelText}"
+                ></Label>
+                <Label x:Name="UnitsLabel"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Units: "
+                   FontSize="Body"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <Label x:Name="ColourLabel"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Dark mode? "
+                   FontSize="Body"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <Entry x:Name="NameEntry"
+                       Grid.Row="1"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="2"
+                       Style="{StaticResource EntryStyle}"
+                       FontSize="Body"
+                       Text=""
+                        Margin="2"
+                    ></Entry>
+                <Entry x:Name="CityEntry"
+                       Grid.Row="2"
+                       Grid.Column="2"
+                       Grid.ColumnSpan="2"
+                       Style="{StaticResource EntryStyle}"
+                       FontSize="Body"
+                       Text=""
+                        Margin="2"
+                    ></Entry>
+                <Picker x:Name="UnitsPicker"
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PickerStyle}"
+                        FontSize="Body"
+                        Margin="2"
+                    ></Picker>
+                <Switch x:Name="ColourSwitch"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                        Scale="2"
+                    ></Switch>
+                <Button x:Name="EditProfile"
+                        Text="Save Changes"
+                        Grid.Row="5"
+                        Grid.Column='2'
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource TertiaryButtonStyle}"
+                        BorderWidth="1"
+                        FontSize="Body"
+                        Clicked="EditProfile_Clicked"
+                        Padding="2"
+                        Margin="2"
+                    ></Button>
+                <Label x:Name="UpdateLabel"
+                       Text=""
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       FontSize="Body"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                       ></Label>
+                <Button x:Name="HomeButton"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Text="Home"
+                    FontSize="Caption"
+                    Clicked="HomeButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="SearchButton"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="Search"
+                    FontSize="Caption"
+                        Clicked="SearchButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="ProfileButton"
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Text="Profile"
+                    FontSize="Caption"
+                        Clicked="ProfileButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="FaveButton"
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    Text="★"
+                    FontSize="Caption"
+                        Clicked="FaveButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

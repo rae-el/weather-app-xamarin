@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.App">
+    <Application.Resources>
+        <!--dark theme-->
+        <!--dark grey blue-->
+        <Color x:Key="PageBackgroundColorDark">#192143</Color>
+        <!--medium grey blue-->
+        <Color x:Key="ButtonBackgroundColorDark">#334756</Color>
+        <!--light orange-->
+        <Color x:Key="ButtonBorderColorDark">#e6bbad</Color>
+        <!--white-->
+        <Color x:Key="TextColorDark">#fff</Color>
+
+        <!--light theme-->
+        <!--White-->
+        <Color x:Key="PageBackgroundColorLight">#FFFFFF</Color>
+        <!--light blue-->
+        <Color x:Key="ButtonBackgroundColorLight">#add8e6</Color>
+        <!--light orange-->
+        <Color x:Key="ButtonBorderColorLight">#e6bbad</Color>
+        <!--Slate grey-->
+        <Color x:Key="TextColorLight">#808080</Color>
+
+        <Style x:Key="PageBackground" TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+        </Style>
+        <Style x:Key="LabelText" TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource ButtonBackgroundColorDark}, Light={StaticResource ButtonBackgroundColorLight}}"/>
+            <Setter Property="BorderColor" Value="{AppThemeBinding Dark={StaticResource ButtonBorderColorDark}, Light={StaticResource ButtonBorderColorLight}}"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+        </Style>
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+            <Setter Property="BorderColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+        </Style>
+        <Style x:Key="TertiaryButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+            <Setter Property="BorderColor" Value="{AppThemeBinding Dark={StaticResource ButtonBorderColorDark}, Light={StaticResource ButtonBorderColorLight}}"/>
+        </Style>
+        <Style x:Key="CheckboxColour" TargetType="CheckBox">
+            <Setter Property="Color" Value="{AppThemeBinding Dark={StaticResource ButtonBorderColorDark}, Light={StaticResource ButtonBorderColorLight}}"/>
+        </Style>
+        <Style x:Key="PickerStyle" TargetType="Picker">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+        </Style>
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColorLight}}"/>
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PageBackgroundColorDark}, Light={StaticResource PageBackgroundColorLight}}"/>
+        </Style>
+    </Application.Resources>
+</Application>

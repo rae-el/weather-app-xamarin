@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Weather"
+             x:Class="Weather.SearchWeather">
+        <StackLayout Style="{StaticResource Key=PageBackground}">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            <CheckBox x:Name="FaveCheckBox"
+                      Grid.Row="0"
+                      Grid.Column="3"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      Style="{StaticResource Key=CheckboxColour}"
+                      >
+            </CheckBox>
+            <Button x:Name="BackButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="←"
+                        FontSize="Large"
+                        Style="{StaticResource Key=SecondaryButtonStyle}"
+                        Padding="2"
+                        Margin="2"
+                        Clicked="BackButton_Clicked"
+                    />
+                <Label x:Name="CityLabel"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Label x:Name="CountryLabel"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Body"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Label x:Name="TempLabel"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Label x:Name="WeatherDescLabel"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Body"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Image x:Name="WeatherImage"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Source=""
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   Aspect="AspectFill"
+                />
+                <Label x:Name="FeelsLikeLabel"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Body"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Label x:Name="WindLabel"
+                   Grid.Row="7"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Body"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Label x:Name="HumidityLabel"
+                   Grid.Row="8"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text=""
+                   FontSize="Body"
+                   HorizontalTextAlignment="Center"
+                   Style="{StaticResource Key=LabelText}"
+                />
+                <Button x:Name="HomeButton"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Text="Home"
+                    FontSize="Caption"
+                    Clicked="HomeButton_Clicked"
+                    Style="{StaticResource Key=ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                />
+                <Button x:Name="SearchButton"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="Search"
+                    FontSize="Caption"
+                    Clicked="SearchButton_Clicked"
+                    Style="{StaticResource Key=ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                />
+                <Button x:Name="ProfileButton"
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Text="Profile"
+                    FontSize="Caption"
+                    Clicked="ProfileButton_Clicked"
+                    Style="{StaticResource Key=ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                />
+                <Button x:Name="FaveButton"
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    Text="★"
+                    FontSize="Caption"
+                    Clicked="FaveButton_Clicked"
+                    Style="{StaticResource Key=ButtonStyle}"
+                    BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                />
+            </Grid>
+        </StackLayout>
+</ContentPage>

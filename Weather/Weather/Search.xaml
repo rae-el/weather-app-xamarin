@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Search">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource PageBackground}">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BackButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="←"
+                        FontSize="Large"
+                        Style="{StaticResource SecondaryButtonStyle}"
+                        Clicked="BackButton_Clicked"
+                        Padding="2"
+                        Margin="2"
+                    >
+                </Button>
+                <Label x:Name="SearchLabel"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text="Have a little look"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <Label x:Name="SearchDirectionLabel"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   Text="Enter a city name in the box and press the search button! If your city is eligible it will appear as a button below"
+                   FontSize="Body"
+                   HorizontalTextAlignment="Center"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <Entry x:Name="SearchEntry"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Style="{StaticResource EntryStyle}"
+                       FontSize="Body"
+                       Text=""
+                        Margin="2"
+                    ></Entry>
+                <Button x:Name="SearchCityButton"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource TertiaryButtonStyle}"
+                        BorderWidth="1"
+                        Text="Search"
+                        Padding="2"
+                        Margin="2"
+                        Clicked="SearchCityButton_Clicked"
+                    ></Button>
+                <StackLayout x:Name="SearchStack"
+                             Grid.Row="3"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="4"
+                             Padding="2"
+                        Margin="2"
+                    ></StackLayout>
+                <Button x:Name="FoundCityButton"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        Padding="2"
+                        Margin="2"
+                        Style="{StaticResource SecondaryButtonStyle}"
+                        Text=""
+                        Clicked="FoundCityButton_Clicked"
+                    ></Button>
+                <Button x:Name="HomeButton"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Text="Home"
+                    FontSize="Caption"
+                        Clicked="HomeButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="SearchButton"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="Search"
+                    FontSize="Caption"
+                        Clicked="SearchButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="ProfileButton"
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Text="Profile"
+                    FontSize="Caption"
+                        Clicked="ProfileButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="FaveButton"
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    Text="★"
+                    FontSize="Caption"
+                        Clicked="FaveButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

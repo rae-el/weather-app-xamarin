@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Favourites">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource PageBackground}">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BackButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="←"
+                        FontSize="Large"
+                        Clicked="BackButton_Clicked"
+                        Padding="2"
+                        Margin="2"
+                        Style="{StaticResource SecondaryButtonStyle}"
+                    >
+                </Button>
+                <Label x:Name="FavouritesLabel"
+                   Grid.Row="0"
+                   Grid.RowSpan="2"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Text="Your Favourite Cities"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                       Padding="2"
+                        Margin="2"
+                       Style="{StaticResource LabelText}"
+                ></Label>
+                <StackLayout x:Name="FavouritesStack"
+                             Grid.Row="2"
+                             Grid.RowSpan="7"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="4"
+                             Padding="2"
+                        Margin="2"
+                    >
+                </StackLayout>
+                <Button x:Name="ClearFavesButton"
+                        Grid.Row="8"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Text="Clear Favourites"
+                        Style="{StaticResource TertiaryButtonStyle}"
+                        Clicked="ClearFavesButton_Clicked"
+                        IsVisible="false"
+                    ></Button>
+                <Button x:Name="HomeButton"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Text="Home"
+                    FontSize="Caption"
+                        Clicked="HomeButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="SearchButton"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Text="Search"
+                    FontSize="Caption"
+                        Clicked="SearchButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="ProfileButton"
+                    Grid.Row="9"
+                    Grid.Column="2"
+                    Text="Profile"
+                    FontSize="Caption"
+                        Clicked="ProfileButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+                <Button x:Name="FaveButton"
+                    Grid.Row="9"
+                    Grid.Column="3"
+                    Text="★"
+                    FontSize="Caption"
+                        Clicked="FaveButton_Clicked"
+                        Style="{StaticResource ButtonStyle}"
+                        BorderWidth="2"
+                    CornerRadius="20"
+                    Padding="4"
+                ></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
